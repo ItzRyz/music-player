@@ -1,0 +1,47 @@
+/* Genre Grid */
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* End Genre Grid */
+
+/* Genre Card */
+.genre-card {
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.genre-card:hover {
+    transform: translateY(-3px);
+}
+
+.g1 {
+    background: linear-gradient(135deg, #e52d27, #b31217);
+}
+
+.g2 {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.g3 {
+    background: linear-gradient(135deg, #fc4a1a, #f7b733);
+}
+
+.g4 {
+    background: linear-gradient(135deg, #7f00ff, #e100ff);
+}
+
+/* End Genre Cards */
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    .content-section {
+        padding: 40px 5%;
+    }
+}
+
+/* End Responsive Layout */

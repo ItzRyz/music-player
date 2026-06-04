@@ -1,0 +1,18 @@
+/* Radio Stations */
+.radio-item, .library-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+/* End Radio Stations */
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    .content-section {
+        padding: 40px 5%;
+    }
+}
+
+/* End Responsive Layout */

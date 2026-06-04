@@ -1,0 +1,338 @@
+/* Hero */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    min-height: 400px;
+    background: linear-gradient(135deg, #1e1e2f 0%, #0f0f12 100%);
+    border-bottom: 1px solid #222230;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.tag {
+    background-color: rgba(29, 185, 84, 0.1);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    color: var(--text-muted);
+    margin: 20px 0 30px 0;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.vinyl-disk {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #333 10%, #111 11%, #111 20%, #222 21%, #222 40%, #111 41%, #000 100%);
+    border: 5px solid #2a2a3a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: spin 12s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* End Hero */
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+}
+
+/* End Content Grid */
+
+
+/* Player Card */
+.player-card {
+    background-color: var(--bg-surface);
+    border-radius: 20px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.track-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.track-cover {
+    width: 240px;
+    height: 240px;
+    border-radius: 16px;
+    background: linear-gradient(45deg, #4158d0, #c850c0);
+    margin-bottom: 25px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    transition: background 0.5s ease;
+}
+
+.track-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+    color: var(--text-main);
+}
+
+.track-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.player-controls {
+    width: 100%;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.time {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    width: 40px;
+}
+
+#time-current {
+    text-align: left;
+}
+
+#time-max {
+    text-align: right;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent);
+    border-radius: 10px;
+    transition: width 0.1s linear;
+}
+
+/* Penyelarasan Tombol Kontrol (Alinea Sempurna) */
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+}
+
+.ctrl-btn {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctrl-btn:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+.ctrl-btn:active {
+    transform: scale(0.95);
+}
+
+.play-btn {
+    font-size: 1.5rem;
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.play-btn:hover {
+    background-color: var(--accent);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* End Player Card */
+
+/* Playlist */
+.playlist-container h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 480px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.playlist::-webkit-scrollbar {
+    width: 4px;
+}
+
+.playlist::-webkit-scrollbar-thumb {
+    background-color: var(--bg-surface-hover);
+    border-radius: 4px;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--bg-surface);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 1px solid transparent;
+}
+
+.track-item:hover {
+    background-color: var(--bg-surface-hover);
+}
+
+.track-item.active {
+    background-color: rgba(29, 185, 84, 0.15);
+    border: 1px solid rgba(29, 185, 84, 0.3);
+}
+
+.track-num {
+    font-weight: 600;
+    color: var(--text-muted);
+    width: 40px;
+}
+
+.track-item.active .track-num {
+    color: var(--accent);
+}
+
+.track-details {
+    flex: 1;
+    text-align: left;
+}
+
+.track-details h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.track-details p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.track-duration {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* End Playlist */
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        padding: 40px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .content-section {
+        padding: 40px 5%;
+    }
+}
+
+/* End Responsive Layout */

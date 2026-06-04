@@ -1,0 +1,47 @@
+/* Library Style */
+.library-list {
+    background-color: var(--bg-surface);
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.lib-header,
+.lib-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.lib-header {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.lib-item {
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lib-item:hover {
+    background-color: var(--bg-surface-hover);
+}
+
+/* End Library Style */
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    .content-section {
+        padding: 40px 5%;
+    }
+
+    .lib-header,
+    .lib-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+
+/* End Responsive Layout */

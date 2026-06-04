@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="js/title.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/footer.js" defer></script>
+  </head>
+  <body>
+    <header id="global-navbar" class="navbar"></header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <span class="tag">Trending Now</span>
+          <h1>Keep the Good Vibes Flowing</h1>
+          <p>
+            Temukan jutaan lagu, playlist yang dikurasi khusus untukmu, dan
+            podcast terbaru di satu tempat.
+          </p>
+          <button
+            class="btn-primary"
+            onclick="
+              document
+                .getElementById('main-player')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Listen Now
+          </button>
+        </div>
+        <div class="hero-image">
+          <div class="vinyl-disk"></div>
+        </div>
+      </section>
+
+      <section class="content-section" id="main-player">
+        <h2 class="section-title">Your Weekly Rotation</h2>
+        <div class="content-grid">
+          <div class="player-card">
+            <div class="track-info">
+              <div class="track-cover" id="current-cover"></div>
+              <h3 id="current-title">Midnight Melancholy</h3>
+              <p id="current-artist">Lofi Cloud</p>
+            </div>
+            <div class="player-controls">
+              <div class="progress-container">
+                <span class="time" id="time-current">0:00</span>
+                <div class="progress-bar">
+                  <div class="progress" id="progress-line"></div>
+                </div>
+                <span class="time" id="time-max">3:45</span>
+              </div>
+              <div class="control-buttons">
+                <button class="ctrl-btn" id="prev-btn">⏮</button>
+                <button class="ctrl-btn play-btn" id="play-btn">▶</button>
+                <button class="ctrl-btn" id="next-btn">⏭</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="playlist-container">
+            <h3>Featured Playlist</h3>
+            <div class="playlist" id="playlist-wrapper"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="yt-player"
+      style="
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        width: 0;
+        height: 0;
+      "
+    ></div>
+
+    <footer id="global-footer" class="footer"></footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  </body>
+</html>
