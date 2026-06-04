@@ -1,6 +1,6 @@
 // --- KONFIGURASI SPOTIFY ---
 const CLIENT_ID = '11c2ed5dbb454abba5a2080bb2f1dfd2';
-const REDIRECT_URI = 'http://127.0.0.1:5500/'; // Harus sama dengan di dashboard
+const REDIRECT_URI = 'https://itzryz.github.io/music-player/'; // Harus sama dengan di dashboard
 const SCOPES = 'streaming user-read-playback-state user-modify-playback-state user-read-currently-playing user-read-private user-read-email';
 
 // ==========================================
