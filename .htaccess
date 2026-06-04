@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Mengabaikan folder atau file yang memang nyata ada ekstensinya
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Menghilangkan ekstensi .html secara otomatis
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
